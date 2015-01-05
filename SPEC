@@ -1,0 +1,31 @@
+Should be a REST bridge to mega:
+
+	- Should set a 'root' customizable root like /Root/Storage123/ 
+	- No auth neccecary, for internal use.
+	- No thumbnails need to be generated
+	- Should cache mega sessions
+
+1. To upload a file:
+
+PUT http://proxy/foo/bar.jpg
+
+Uploads to /Root/Storage123/foo/bar.jpg, optionally creates directories if needed.
+
+
+2. To download a file:
+
+GET http://proxy/foo/bar.jpg
+
+Streaming if possible/practical. Local caching is nice.
+
+
+3. To get directory listing:
+
+GET http://proxy/foo/
+
+Lists files/directories
+
+
+
+
+
